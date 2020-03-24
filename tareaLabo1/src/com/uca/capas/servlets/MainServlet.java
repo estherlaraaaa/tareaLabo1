@@ -35,21 +35,18 @@ public class MainServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//doGet(request, response);
+
 		String user = "estherlara";
 		String pass = "123";
 		
 		String userParam = request.getParameter("user");
 		String passParam = request.getParameter("pass");
 		
-		if(user.equals(userParam) && pass.equals(passParam)) { //user == userParam && pass == passParam
+		if(user.equals(userParam) && pass.equals(passParam)) { 
 			PrintWriter out = response.getWriter();
 			out.println("<html>");
 			out.println("<body>");
 			out.println("<h1 style=\"color:green;\"> Usuario Autorizado </h1>");
-			//out.println(user + " + " + userParam);
-			//out.println(pass + " + " + passParam);
 			out.println("</body>");
 			out.println("</html>");
 		} else {
@@ -57,8 +54,6 @@ public class MainServlet extends HttpServlet {
 			out.println("<html>");
 			out.println("<body");
 			out.println("<h1 style=\"color:red;\"> Usuario NO Autorizado </h1>");
-			//out.println(user + " + " + userParam);
-			//out.println(pass + " + " + passParam);
 			out.println("</body>");
 			out.println("</html>");
 		}
